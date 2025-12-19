@@ -1,0 +1,23 @@
+# experiments/config/evaluation_weights.yaml
+epidemic_control:
+  weight: 0.40
+  metrics:
+    peak_infection_rate: 0.15
+    time_to_peak: 0.10
+    total_cases: 0.10
+    outbreak_duration: 0.05
+
+resource_efficiency:
+  weight: 0.35  
+  metrics:
+    resource_utilization: 0.15
+    allocation_accuracy: 0.10
+    response_time: 0.05
+    wastage_rate: 0.05
+
+socioeconomic_impact:
+  weight: 0.25
+  metrics:
+    lockdown_population_ratio: 0.10
+    economic_cost_index: 0.10
+    social_disruption: 0.05

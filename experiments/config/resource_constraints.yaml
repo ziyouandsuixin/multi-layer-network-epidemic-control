@@ -1,0 +1,41 @@
+# experiments/config/resource_constraints.yaml
+resource_limits:
+  testing:
+    daily_capacity: 100
+    total_kits: 2000
+    accuracy: 0.95
+    
+  protective_gear:
+    masks: 5000
+    ppe_suits: 1000 
+    sanitizer: 2000
+    
+  medical_resources:
+    staff: 50
+    hospital_beds: 80
+    icu_beds: 20
+
+socioeconomic_limits:
+  max_lockdown_ratio: 0.4
+  economic_cost_per_day: 10000
+  essential_worker_ratio: 0.2
+
+priority_rules:
+  level_1:
+    conditions:
+      min_risk_level: "critical"
+    allocation_ratio: 0.40
+    
+  level_2:
+    conditions:
+      min_risk_level: "high"
+      min_population_density: "medium"
+    allocation_ratio: 0.35
+    
+  level_3:
+    conditions:
+      economic_importance: "high"
+    allocation_ratio: 0.15
+    
+  reserve:
+    allocation_ratio: 0.10

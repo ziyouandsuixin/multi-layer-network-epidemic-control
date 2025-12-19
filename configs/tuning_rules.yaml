@@ -1,0 +1,9 @@
+infection:
+  high_infection_reduction: 0.7
+  pressure_weight_reduction: 0.8
+  recovery_boost: 1.5
+  
+stability:
+  max_infection_threshold: 0.3
+  min_recovery_threshold: 0.1
+  optimal_growth_rate: 0.1

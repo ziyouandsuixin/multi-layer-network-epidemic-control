@@ -1,0 +1,17 @@
+# experiments/config/baseline_params.yaml
+classic_seir:
+  r0: 3.8
+  latent_period: 5.0
+  infectious_period: 8.0
+  intervention_effectiveness: 0.15
+
+network_seir:
+  infection_probability: 0.08
+  recovery_probability: 0.12
+  community_detection: "static"
+
+grid_management:
+  n_clusters: 8
+  geographic_weight: 0.6
+  population_weight: 0.4
+  intervention_effectiveness: 0.25

@@ -1,0 +1,21 @@
+# 优化后的动力学参数
+infection:
+  base_prob: 0.04
+  pressure_weight: 0.15
+  max_infection_prob: 0.25
+  super_spreader_multiplier: 1.5
+
+recovery:
+  base_rate: 0.12
+  time_decay: 0.05
+  min_recovery_prob: 0.1
+  max_recovery_prob: 0.4
+
+community:
+  physical_resolution: 0.8
+  information_resolution: 1.2
+  min_community_size: 5
+
+simulation:
+  time_steps: 10
+  initial_infected_ratio: 0.05

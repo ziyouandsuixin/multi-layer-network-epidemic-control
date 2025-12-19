@@ -1,0 +1,17 @@
+# experiments/config/experiment_config.yaml
+experiment:
+  time_steps: 30
+  population_size: 500
+  initial_infected_ratio: 0.05
+  output_dir: "outputs/comparative_experiments"
+  
+simulation:
+  network_type: "social"
+  infection_params:
+    base_r0: 3.8
+    super_spreader_multiplier: 1.5
+    
+evaluation:
+  use_layered_system: true
+  save_detailed_logs: true
+  generate_visualizations: true

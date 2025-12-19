@@ -1,0 +1,93 @@
+# experiments/config/layered_evaluation.yaml
+evaluation_layers:
+  # 基础能力层 - 所有模型通用评估
+  basic_capability:
+    weight: 0.60
+    description: "基础疫情防控和资源管理能力"
+    metrics:
+      epidemic_control:
+        weight: 0.25
+        description: "疫情控制效果"
+        metrics:
+          peak_infection_rate: 
+            weight: 0.15
+            description: "峰值感染率"
+          total_cases: 
+            weight: 0.10
+            description: "总感染病例数"
+      
+      resource_efficiency:
+        weight: 0.20  
+        description: "资源使用效率"
+        metrics:
+          utilization_rate: 
+            weight: 0.12
+            description: "资源利用率"
+          constraint_violation: 
+            weight: 0.08
+            description: "资源约束违反程度"
+      
+      socioeconomic:
+        weight: 0.15
+        description: "社会经济影响"
+        metrics:
+          lockdown_ratio: 
+            weight: 0.08
+            description: "封控人口比例"
+          economic_cost: 
+            weight: 0.07
+            description: "经济成本"
+  
+  # 智能能力层 - 精细模型优势评估
+  intelligent_capability:
+    weight: 0.40
+    description: "智能预测和精准干预能力"
+    metrics:
+      risk_prediction:
+        weight: 0.15
+        description: "风险预测精度"
+        metrics:
+          ndcg_score: 
+            weight: 0.08
+            description: "风险排名准确度(NDCG)"
+          early_warning_accuracy: 
+            weight: 0.07
+            description: "早期预警准确率"
+      
+      targeted_intervention:
+        weight: 0.15
+        description: "精准干预效果"
+        metrics:
+          allocation_accuracy: 
+            weight: 0.08
+            description: "资源投放准确率"
+          super_spreader_control: 
+            weight: 0.07
+            description: "超级传播者控制效果"
+      
+      adaptability:
+        weight: 0.10
+        description: "适应性和响应能力"
+        metrics:
+          response_to_changes: 
+            weight: 0.10
+            description: "应对突发变化能力"
+
+# 模型类型识别配置
+model_identification:
+  enhanced_models:
+    - "Our_Enhanced_Model"
+    - "enhanced_model"
+    - "risk_aware_model"
+  
+  traditional_models:
+    - "classic_seir"
+    - "network_seir" 
+    - "grid_management"
+    - "basic_seir"
+
+# 智能能力评估回退配置（传统模型使用）
+intelligent_baseline_scores:
+  risk_prediction: 0.3
+  targeted_intervention: 0.4
+  adaptability: 0.5
